@@ -1,0 +1,62 @@
+.rank-container {
+  position: fixed;
+  display: block;
+  top:0;
+  bottom: 0;
+  right: 0;
+  width: 240px;
+  background-color: white;
+  border-left: 1px solid;
+  padding: 8px;
+  overflow-y: scroll;
+}
+
+.rank-container-close {
+  position: fixed;
+  display: block;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 60px;
+}
+
+.rank-visible-btn {
+  position: fixed;
+  bottom: 60px;
+  right: 240px;
+  border-radius: 30px;
+  width: 60px;
+  height: 60px;
+  z-index: 999;
+}
+
+.rank-visible-btn-close {
+  position: fixed;
+  bottom: 60px;
+  right: 0px;
+  border-radius: 30px;
+  width: 60px;
+  height: 60px;
+}
+
+.rank-content-container {
+  display: block;
+}
+
+.rank-self-item {
+  background-color: blueviolet;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.rank-others-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.rank-item-h4 {
+  margin-top: 0;
+}

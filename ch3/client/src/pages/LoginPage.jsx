@@ -23,9 +23,11 @@ function LoginPage() {
         <input  placeholder='type your user name' className='loginInput' value={username} onChange={(e)=>{setUsername(e.target.value)}} />
         <input  placeholder='type your password' className='loginInput' type="password" value={password} onChange={(e)=>{setPassword(e.target.value)}} />
         <button className='loginBtn' onClick={async ()=>{
-          const loginresponse = await dispatch(login(username,password)).unwrap()
+          const loginresponse = await dispatch(login({username,password})).unwrap()
           if (loginresponse.status === 1) {
             navigate('/')
+          }else{
+            alert("用户名或密码错误")
           }
         }}>LOG IN</button>
         <div className='signup-and-forgetpassword'>

@@ -1,0 +1,114 @@
+.speed-game-box {
+  /* background-color: white; */
+  width: 700px;
+  height: 400px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+}
+
+.speed-game-box-bg {
+  position: absolute;
+  background-color: aliceblue;
+  opacity: 0.9;
+  /* width: 100%; */
+  /* height: 100vh; */
+  width: 700px;
+  height: 400px;
+  z-index: -999;
+  border-radius: 12px;
+}
+
+.speed-game-content-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.speed-game-title-container {
+  width: 100%;
+  text-align: center;
+}
+
+.speed-game-controller-container {
+  flex: 1;
+  text-align: center;
+}
+
+.speed-game-controller-bet-types {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.speed-game-controller-doubles {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 12px;
+  align-items: center;
+}
+
+.speed-game-bet-double-btn {
+  width: 60px;
+  height: 45px;
+  border-radius: 16px;
+  font-size: larger;
+}
+
+.speed-game-betTypeBtn-selected {
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  border: 2px;
+  border-color: #ff0000;
+  background-color: #ff0000;
+  color: white;
+  font-size: larger;
+}
+
+.speed-game-betTypeBtn {
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  font-size: larger;
+}
+
+.speed-game-controller-bet {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 22px;
+  
+}
+
+.speed-game-bet-btn {
+  width: 120px;
+  height: 40px;
+  border-radius: 12px;
+  font-size: larger;
+}
+
+.speed-game-record-container {
+  width: 300px;
+  height: 200px;
+  text-align: center;
+}
+
+.speed-game-record-content {
+  width: 100%;
+  height: 200px;
+  overflow-y: scroll;
+}
+
+.record-cell-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.speed-game-amount-container {
+  width: 100%;
+  text-align: center;
+}

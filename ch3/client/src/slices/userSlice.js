@@ -65,12 +65,14 @@ const fakelogin = async () => {
   });
 }
 
-export const login = createAsyncThunk('user/login', async (username, password)=>{
-    await fakelogin()
-    return {
-      status: 1,
-      name: '张三'
-    }  
+export const login = createAsyncThunk('user/login', async ({username, password})=>{
+    const resposne = await client.post(`/login`,{username,password})
+    return resposne.data
+})
+
+export const bet = createAsyncThunk('user/bet', async ({sid, betData}) => {
+  const response = await client.post(`/bet`,{sid,betData})
+  return response.data
 })
 
 const userSlice = createSlice({
@@ -97,7 +99,10 @@ const userSlice = createSlice({
       
     })
     .addCase(login.fulfilled, (state, action) => {
-      return {loginState:action.payload.status, user:{...state.user,name:action.payload.name}}
+      return {loginState:action.payload.status, user:action.payload.user}
+    })
+    .addCase(bet.fulfilled, (state, action) => {
+      return {...state,user:{...state.user,amount:action.payload.amount}}
     })
   },
 })
